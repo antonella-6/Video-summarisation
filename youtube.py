@@ -6,7 +6,7 @@ for url in videos:
     try:
         youtube = pytube.YouTube(url)
         video = youtube.streams.get_highest_resolution()
-        folder = f"./scene/{re.sub(r'[^A-Za-z0-9]', '', video.title)}"
+        folder = f"./name/{re.sub(r'[^A-Za-z0-9]', '', video.title)}"
         if os.path.isdir(folder):
             print(url)
             continue

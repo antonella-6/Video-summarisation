@@ -1,12 +1,12 @@
 import pytube
 import os
 import re
-videos = ["https://www.youtube.com/watch?v=4ZIZbFItiKc"]
+videos = ["url"]
 for url in videos:
     try:
         youtube = pytube.YouTube(url)
         video = youtube.streams.get_highest_resolution()
-        folder = f"./luca/{re.sub(r'[^A-Za-z0-9]', '', video.title)}"
+        folder = f"./scene/{re.sub(r'[^A-Za-z0-9]', '', video.title)}"
         if os.path.isdir(folder):
             print(url)
             continue

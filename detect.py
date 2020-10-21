@@ -6,7 +6,7 @@ from scenedetect import SceneManager
 from scenedetect.detectors import ContentDetector
 
 folders = os.listdir("./name")
-threshold = int(sys.argv[1]) if len(sys.argv) > 1 else 35
+threshold = int(sys.argv[1]) if len(sys.argv) > 1 else 30
 
 for folder in folders:
     folder_path = f"{os.getcwd()}/name/{folder}"
